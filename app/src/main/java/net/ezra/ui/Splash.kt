@@ -58,7 +58,7 @@ fun SplashScreen(navController: NavHostController) {
             modifier = Modifier.scale(scale.value)
         )
 
-        Text("Ad Lad")
+        Text("AdLad")
 
 
 
