@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Ad Lad</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="dont_have_account">Do not have an account?\Click here to sign up</string>
+    <string name="name">name</string>
+    <string name="signup">signup</string>
+    <string name="already_have_account">Already have an account?\Click here to login</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="empty" />
+    <string name="home">Home</string>
+    <string name="about">about</string>
+    <string name="logout">logout</string>
+    <string name="apen">Ad Softwares</string>
+    <string name="add_stud">Clientele Registration</string>
+    <string name="save_data">Save client</string>
+    <string name="select_image">Select Image</string>
+    <string name="developer">Developed with ❤ by meeee</string>
+    <string name="call">Call me 📲</string>
+</resources>
