@@ -130,14 +130,7 @@ fun DashboardScreen(navController: NavHostController)  {
                     containerColor = Color(0xff000000),
                     titleContentColor = Color.White,
                 ),
-                navigationIcon = {
-                    IconButton(onClick = {}) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "backIcon",tint = Color.White)
-                    }
-                },
-
-
-
+                
             )
         }, content = {
             Column(
