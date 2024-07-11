@@ -82,17 +82,6 @@ fun HomeScreen(navController: NavHostController) {
                 title = {
                     Text(text = stringResource(id = R.string.apen))
                 },
-                navigationIcon = @Composable {
-                    if (!isDrawerOpen) {
-                        IconButton(onClick = { isDrawerOpen = true }) {
-                            Icon(
-                                Icons.Default.Menu,
-                                contentDescription = "Menu",
-                                tint = Color.White
-                                )
-                        }
-                    }
-                },
 
                 actions = {
                     IconButton(onClick = {
@@ -102,9 +91,9 @@ fun HomeScreen(navController: NavHostController) {
 
                     }) {
                         Icon(
-                            imageVector = Icons.Filled.AccountCircle,
+                            imageVector = Icons.Filled.AccountBox,
                             contentDescription = null,
-                            tint = Color.White
+                            tint = Color.Black
                         )
                     }
                 },
@@ -146,7 +135,7 @@ fun HomeScreen(navController: NavHostController) {
                             .clickable {
 
                                 val intent = Intent(Intent.ACTION_DIAL)
-                                intent.data = Uri.parse("tel:+254796759850")
+                                intent.data = Uri.parse("tel:+254725368376")
 
                                 callLauncher.launch(intent)
                             }
@@ -185,7 +174,7 @@ Row {
                         popUpTo(ROUTE_HOME) { inclusive = true }
                     }
                 },
-            text = "Add Products",
+            text = "Create",
             textAlign = TextAlign.Center,
             fontSize = 20.sp,
             color = MaterialTheme.colorScheme.onSurface
@@ -203,7 +192,7 @@ Row {
                      popUpTo(ROUTE_HOME) { inclusive = true }
                  }
              },
-         text = "Add Students",
+         text = "Register",
          textAlign = TextAlign.Center,
          fontSize = 20.sp,
          color = MaterialTheme.colorScheme.onSurface
@@ -219,7 +208,7 @@ Row {
                                             popUpTo(ROUTE_HOME) { inclusive = true }
                                         }
                                     },
-                                text = "view Products",
+                                text = "View 'em",
                                 textAlign = TextAlign.Center,
                                 fontSize = 20.sp,
                                 color = MaterialTheme.colorScheme.onSurface
@@ -229,11 +218,11 @@ Row {
                     
                     Spacer(modifier = Modifier.height(15.dp))
                     
-                    Text(
-                        text = "You're welcome",
-                        fontSize = 30.sp,
-                        color = Color.White
-                    )
+                    // Text(
+                    //     text = "",
+                    //     fontSize = 30.sp,
+                    //     color = Color.White
+                    // )
 
 
 
@@ -251,48 +240,48 @@ Row {
 
 
 
-    )
+    )}
 
-    AnimatedDrawer(
-        isOpen = isDrawerOpen,
-        onClose = { isDrawerOpen = false }
-    )
-}
+//     AnimatedDrawer(
+//         isOpen = isDrawerOpen,
+//         onClose = { isDrawerOpen = false }
+//     )
+// }
 
-@Composable
-fun AnimatedDrawer(isOpen: Boolean, onClose: () -> Unit) {
-    val drawerWidth = remember { Animatable(if (isOpen) 250f else 0f) }
+// @Composable
+// fun AnimatedDrawer(isOpen: Boolean, onClose: () -> Unit) {
+//     val drawerWidth = remember { Animatable(if (isOpen) 250f else 0f) }
 
-    LaunchedEffect(isOpen) {
-        drawerWidth.animateTo(if (isOpen) 250f else 0f, animationSpec = tween(durationMillis = 300))
-    }
+//     LaunchedEffect(isOpen) {
+//         drawerWidth.animateTo(if (isOpen) 250f else 0f, animationSpec = tween(durationMillis = 300))
+//     }
 
-    Surface(
-        modifier = Modifier
-            .fillMaxHeight()
-            .width(drawerWidth.value.dp)
-            ,
-        color = Color.LightGray,
-//        elevation = 16.dp
-    ) {
-        Column {
-            Text(
-                text = "Drawer Item 1"
+//     Surface(
+//         modifier = Modifier
+//             .fillMaxHeight()
+//             .width(drawerWidth.value.dp)
+//             ,
+//         color = Color.LightGray,
+// //        elevation = 16.dp
+//     ) {
+//         Column {
+//             Text(
+//                 text = "Drawer Item 1"
 
-            )
-            Text(
-                text = "Drawer Item 2"
-            )
-            Text(
-                text = "Drawer Item 3",
-                modifier = Modifier.clickable {  }
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            Text(text = stringResource(id = R.string.developer))
+//             )
+//             Text(
+//                 text = "Drawer Item 2"
+//             )
+//             Text(
+//                 text = "Drawer Item 3",
+//                 modifier = Modifier.clickable {  }
+//             )
+//             Spacer(modifier = Modifier.height(16.dp))
+//             Text(text = stringResource(id = R.string.developer))
 
-        }
-    }
-}
+//         }
+//     }
+// }
 
 
 
