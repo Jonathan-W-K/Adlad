@@ -124,7 +124,7 @@ fun DashboardScreen(navController: NavHostController)  {
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
-                    Text(text = "Dashboard", color = Color.White, fontSize = 30.sp)
+                    Text(text = "Dash", color = Color.White, fontSize = 30.sp)
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = Color(0xff000000),
@@ -156,7 +156,7 @@ fun DashboardScreen(navController: NavHostController)  {
                                     }
                             ),
                                 DashboardItemData(
-                                    title = "Profile",
+                                    title = "Client",
                                     icon = Icons.Default.AccountCircle,
                                     imagePainter = null,
                                     badgeCount = 1,
@@ -165,16 +165,16 @@ fun DashboardScreen(navController: NavHostController)  {
                                         // Navigate to profile screen
                                     }
                                 ),
-                                DashboardItemData(
-                                    title = "Settings",
-                                    icon = Icons.Default.Settings,
-                                    imagePainter = null,
-                                    badgeCount = 2,
-                                    onClick = {
-                                        navController.navigate(ROUTE_SETTING_PG)
-                                        // Navigate to settings screen
-                                    }
-                                ),
+                                // DashboardItemData(
+                                //     title = "Settings",
+                                //     icon = Icons.Default.Settings,
+                                //     imagePainter = null,
+                                //     badgeCount = 2,
+                                //     onClick = {
+                                //         navController.navigate(ROUTE_SETTING_PG)
+                                //         // Navigate to settings screen
+                                //     }
+                                // ),
 //                                DashboardItemData(
 //                                    title = "Clients",
 //                                    icon = Icons.Default.Person,
@@ -184,7 +184,7 @@ fun DashboardScreen(navController: NavHostController)  {
 //                                    }
 //                                ),
                                 DashboardItemData(
-                                    title = "Products",
+                                    title = "inventory",
                                     icon = Icons.Default.Person,
                                     imagePainter = painterResource(id = R.drawable.vehicle1),
                                     badgeCount = 4,
