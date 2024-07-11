@@ -163,7 +163,7 @@ fun AddStudents(navController: NavHostController) {
                             OutlinedTextField(
                                 value = studentName,
                                 onValueChange = { studentName = it },
-                                label = { Text(text = "Name") },
+                                label = { Text(text = "User") },
                                 modifier = Modifier
                                     .padding(16.dp)
                                     .fillMaxWidth()
@@ -241,7 +241,6 @@ fun AddStudents(navController: NavHostController) {
                                         uploadImageToFirebaseStorage(
                                             it,
                                             studentName,
-                                            studentClass,
                                             studentEmail,
                                             location,
                                             phone,
@@ -250,16 +249,12 @@ fun AddStudents(navController: NavHostController) {
                                         )
 
                                         studentName = ""
-                                        studentClass = ""
                                         studentEmail = ""
                                         location = ""
                                         phone = ""
                                         photoUri = null
 
                                     }
-                                } else if (studentClass == ""){
-
-                                    Toast.makeText(context, "Please enter class", Toast.LENGTH_SHORT).show()
                                 }
                                 else if (studentEmail == ""){
                                     Toast.makeText(context, "Please enter email", Toast.LENGTH_SHORT).show()
@@ -307,7 +302,6 @@ fun AddStudents(navController: NavHostController) {
 fun uploadImageToFirebaseStorage(
     imageUri: Uri,
     studentName: String,
-    studentClass: String,
     studentEmail: String,
     location: String,
     phone: String,
@@ -331,7 +325,6 @@ fun uploadImageToFirebaseStorage(
             saveToFirestore(
                 downloadUri.toString(),
                 studentName,
-                studentClass,
                 studentEmail,
                 location,
                 phone,
@@ -363,7 +356,6 @@ fun uploadImageToFirebaseStorage(
 fun saveToFirestore(
     imageUrl: String,
     studentName: String,
-    studentClass: String,
     studentEmail: String,
     location: String,
     phone: String,
@@ -377,9 +369,8 @@ fun saveToFirestore(
     val db = Firebase.firestore
     val imageInfo = hashMapOf(
         "imageUrl" to imageUrl,
-        "studentName" to studentName,
-        "studentClass" to studentClass,
-        "studentEmail" to studentEmail,
+        "User" to studentName,
+        "Email" to studentEmail,
         "location" to location,
         "phone" to phone
 
@@ -388,7 +379,7 @@ fun saveToFirestore(
     )
 
 
-    db.collection("Students")
+    db.collection("Client")
         .add(imageInfo)
         .addOnSuccessListener { documentReference ->
 
@@ -396,7 +387,7 @@ fun saveToFirestore(
 
             // Show success dialog
             val dialogBuilder = AlertDialog.Builder(context)
-            dialogBuilder.setTitle("Success")
+            dialogBuilder.setTitle("Done!")
                 .setMessage("Data saved successfully!")
                 .setPositiveButton("OK") { _, _ ->
                     // Optional: Add actions when OK is clicked
