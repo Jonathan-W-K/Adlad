@@ -131,6 +131,7 @@ fun HomeScreen(navController: NavHostController) {
                     Text(
                         text = stringResource(id = R.string.call),
                         fontSize = 20.sp,
+                        fontWeight = FontWeight.W300,
                         modifier = Modifier
                             .padding(16.dp)
                             .clickable {
@@ -144,7 +145,7 @@ fun HomeScreen(navController: NavHostController) {
 
                     Text(
                         text = stringResource(id = R.string.developer),
-                        fontSize = 20.sp,
+                        fontSize = 15.sp,
                     )
 
                     Spacer(modifier = Modifier.height(15.dp))
@@ -160,8 +161,9 @@ Row {
                     }
                 },
             text = "Settings",
-            textAlign = TextAlign.Center,
+            textAlign = TextAlign.Left,
             fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurface,
             )
     }}
@@ -175,9 +177,11 @@ Row {
                         popUpTo(ROUTE_HOME) { inclusive = true }
                     }
                 },
+            
             text = "Create",
             textAlign = TextAlign.Center,
             fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurface
         )
     }
@@ -194,8 +198,9 @@ Row {
                  }
              },
          text = "Register",
-         textAlign = TextAlign.Center,
+         textAlign = TextAlign.Left,
          fontSize = 20.sp,
+         fontWeight = FontWeight.Bold,
          color = MaterialTheme.colorScheme.onSurface
      )
  }
@@ -212,6 +217,7 @@ Row {
                                 text = "View 'em",
                                 textAlign = TextAlign.Center,
                                 fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.onSurface
                             )
                         }
