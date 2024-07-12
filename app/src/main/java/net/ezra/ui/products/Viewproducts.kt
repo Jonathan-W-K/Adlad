@@ -153,6 +153,15 @@ fun ProductListItem(product: Product, onItemClick: (String) -> Unit) {
         Column(
             modifier = Modifier.padding(16.dp)
         ) {
+            Row(){
+                Column {
+                Text(text = "Mpesa")
+                Image(painter = painterResource(id = R.drawable.safad), contentDescription = "")
+            }
+                Column {
+                    Text(text = "Vehicle")
+                    Image(painter = painterResource(id = R.drawable.vehicle), contentDescription = "")
+                }}
             // Product Image or Video
             if (product.videoUrl.isNotEmpty()) {
                 // Display Video (You can implement video player or gif player)
