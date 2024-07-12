@@ -18,6 +18,7 @@ import net.ezra.ui.home.HomeScreen
 import net.ezra.ui.products.AddProductScreen
 import net.ezra.ui.products.ProductDetailScreen
 import net.ezra.ui.products.ProductListScreen
+//import net.ezra.ui.products.ProductSearch
 import net.ezra.ui.setting.Setting_Pg
 import net.ezra.ui.students.AddStudents
 import net.ezra.ui.students.Search
@@ -47,6 +48,10 @@ fun AppNavHost(
         composable(ROUTE_HOME) {
             HomeScreen(navController)
         }
+
+//        composable(ROUTE_PRODUCT_SEARCH) {
+//            ProductSearch(navController)
+//        }
 
         composable(ROUTE_SETTING_PG){
             Setting_Pg(navController)

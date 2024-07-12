@@ -144,10 +144,10 @@ fun HomeScreen(navController: NavHostController) {
                             }
                     )
 
-                    Text(
-                        text = stringResource(id = R.string.developer),
-                        fontSize = 15.sp,
-                    )
+//                    Text(
+//                        text = stringResource(id = R.string.developer),
+//                        fontSize = 15.sp,
+//                    )
 
                     Spacer(modifier = Modifier.height(15.dp))
 Row {
@@ -179,7 +179,7 @@ Row {
                     }
                 },
             
-            text = "Create",
+            text = "Create Advert",
             textAlign = TextAlign.Center,
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
@@ -198,7 +198,7 @@ Row {
                      popUpTo(ROUTE_HOME) { inclusive = true }
                  }
              },
-         text = "Register",
+         text = "Add user",
          textAlign = TextAlign.Left,
          fontSize = 20.sp,
          fontWeight = FontWeight.Bold,
@@ -215,7 +215,7 @@ Row {
                                             popUpTo(ROUTE_HOME) { inclusive = true }
                                         }
                                     },
-                                text = "View 'em",
+                                text = "View Advert",
                                 textAlign = TextAlign.Center,
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold,

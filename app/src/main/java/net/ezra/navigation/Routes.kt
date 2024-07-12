@@ -13,6 +13,7 @@ const val ROUTE_DASHBOARD = "dashboard"
 const val ROUTE_ADD_PRODUCT = "add_product"
 const val ROUTE_VIEW_PROD = "view_prod"
 const val ROUTE_SETTING_PG = "setting"
+const val ROUTE_PRODUCT_SEARCH = "prod_search"
 
 
 

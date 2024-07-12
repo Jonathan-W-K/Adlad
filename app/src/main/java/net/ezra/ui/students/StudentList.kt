@@ -58,7 +58,7 @@ data class Student(
 class FirestoreViewModel : ViewModel() {
 
     private val firestore = Firebase.firestore
-    private val itemsCollection = firestore.collection("Students")
+    private val itemsCollection = firestore.collection("Client")
 
     private val _items = MutableLiveData<List<Student>>()
     val items: LiveData<List<Student>> = _items

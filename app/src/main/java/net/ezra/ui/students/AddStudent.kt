@@ -64,6 +64,7 @@ import net.ezra.R
 import net.ezra.navigation.ROUTE_ADD_STUDENTS
 import net.ezra.navigation.ROUTE_DASHBOARD
 import net.ezra.navigation.ROUTE_HOME
+import net.ezra.navigation.ROUTE_VIEW_STUDENTS
 import java.util.UUID
 
 
@@ -81,13 +82,13 @@ fun AddStudents(navController: NavHostController) {
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
-                    Text(text = "Client registration")
+                    Text(text = "registration")
                 },
                 navigationIcon = {
                     IconButton(onClick = {
 
 
-                        navController.navigate(ROUTE_DASHBOARD) {
+                        navController.navigate(ROUTE_VIEW_STUDENTS) {
                             popUpTo(ROUTE_ADD_STUDENTS) { inclusive = true }
                         }
 
@@ -352,7 +353,6 @@ fun uploadImageToFirebaseStorage(
     }
 }
 
-
 fun saveToFirestore(
     imageUrl: String,
     studentName: String,
@@ -360,12 +360,7 @@ fun saveToFirestore(
     location: String,
     phone: String,
     context: Context,
-
-
-
 ) {
-
-
     val db = Firebase.firestore
     val imageInfo = hashMapOf(
         "imageUrl" to imageUrl,
@@ -373,17 +368,47 @@ fun saveToFirestore(
         "Email" to studentEmail,
         "location" to location,
         "phone" to phone
-
-
-
     )
 
-
-    db.collection("Client")
+    db.collection("Client") // Ensure this matches the collection name
         .add(imageInfo)
         .addOnSuccessListener { documentReference ->
-
             progressDialog?.dismiss()
+            // Show success dialog
+        }
+        .addOnFailureListener {
+            progressDialog?.dismiss()
+//fun saveToFirestore(
+//    imageUrl: String,
+//    studentName: String,
+//    studentEmail: String,
+//    location: String,
+//    phone: String,
+//    context: Context,
+//
+//
+//
+//) {
+//
+//
+//    val db = Firebase.firestore
+//    val imageInfo = hashMapOf(
+//        "imageUrl" to imageUrl,
+//        "User" to studentName,
+//        "Email" to studentEmail,
+//        "location" to location,
+//        "phone" to phone
+//
+//
+//
+//    )
+//
+//
+//    db.collection("Client")
+//        .add(imageInfo)
+//        .addOnSuccessListener { documentReference ->
+//
+//            progressDialog?.dismiss()
 
             // Show success dialog
             val dialogBuilder = AlertDialog.Builder(context)

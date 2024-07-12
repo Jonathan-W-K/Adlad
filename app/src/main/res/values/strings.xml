@@ -16,6 +16,6 @@
     <string name="add_stud">Clientele Registration</string>
     <string name="save_data">Save client</string>
     <string name="select_image">Select Image</string>
-    <string name="developer">Developed with ❤ by meeee</string>
-    <string name="call">Call me 📲</string>
+    <string name="developer">Developed by meeee</string>
+    <string name="call">Call Dev 📲</string>
 </resources>
