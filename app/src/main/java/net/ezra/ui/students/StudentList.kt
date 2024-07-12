@@ -164,21 +164,11 @@ fun Students(navController: NavHostController, viewModel: FirestoreViewModel) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             "backIcon",
-                            tint = Color.White
+                            tint = Color.Red
                         )
                     }
                 },
 
-
-                actions = {
-                    IconButton(onClick = { /* do something */ }) {
-                        Icon(
-                            imageVector = Icons.Filled.Menu,
-                            contentDescription = null,
-                            tint = Color.White
-                        )
-                    }
-                },
                 colors = topAppBarColors(
         containerColor = Color(0xFF000000),
 
