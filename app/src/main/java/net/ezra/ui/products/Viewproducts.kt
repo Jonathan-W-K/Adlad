@@ -140,16 +140,6 @@ fun ProductListItem(product: Product) {
         Column(
             modifier = Modifier.padding(16.dp)
         ) {
-            Row {
-                Column {
-                    Text(text = "Mpesa")
-                    Image(painter = painterResource(id = R.drawable.safad), contentDescription = "")
-                }
-                Column {
-                    Text(text = "Vehicle")
-                    Image(painter = painterResource(id = R.drawable.vehicle), contentDescription = "")
-                }
-            }
             if (product.videoUrl.isNotEmpty()) {
                 Box(
                     modifier = Modifier
