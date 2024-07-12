@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "453870042774",
+    "project_id": "zenmetsu-9a1cc",
+    "storage_bucket": "zenmetsu-9a1cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453870042774:android:66aaa20659054d2a76ccb7",
+        "android_client_info": {
+          "package_name": "net.mee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiYoZFEaYLo9trg-gLk7D-W0cpbQbXVks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
