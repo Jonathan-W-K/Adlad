@@ -97,7 +97,7 @@ fun LoginScreen(navController: NavController, onLoginSuccess: () -> Unit) {
                             popUpTo(ROUTE_LOGIN) { inclusive = true }
                         }
                     },
-                text = "go to register",
+                text = "",
                 textAlign = TextAlign.Center,
                 color = androidx.compose.material3.MaterialTheme.colorScheme.onSurface
             )
