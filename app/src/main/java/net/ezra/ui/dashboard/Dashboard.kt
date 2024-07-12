@@ -152,8 +152,7 @@ fun DashboardScreen(navController: NavHostController)  {
                                     imagePainter = null,
                                     badgeCount = 0,
                                     onClick = { navController.navigate(ROUTE_HOME)
-                                        // Navigate to profile screen
-                                    }
+                                        }
                             ),
                                 DashboardItemData(
                                     title = "Client",
@@ -184,7 +183,7 @@ fun DashboardScreen(navController: NavHostController)  {
 //                                    }
 //                                ),
                                 DashboardItemData(
-                                    title = "inventory",
+                                    title = "Inventory",
                                     icon = Icons.Default.Person,
                                     imagePainter = painterResource(id = R.drawable.vehicle1),
                                     badgeCount = 4,
@@ -253,14 +252,14 @@ fun DashboardItem(item: DashboardItemData) {
             if (item.imagePainter != null) {
                 Image(
                     painter = item.imagePainter,
-                    contentDescription = "Dashboard Image", // Provide appropriate content description
+                    contentDescription = "Dashmage", // Provide appropriate content description
                     modifier = Modifier.size(36.dp), // Adjust size as needed
                     contentScale = ContentScale.Fit // Adjust content scale if necessary
                 )
             } else {
                 Icon(
                     imageVector = item.icon,
-                    contentDescription = "Dashboard Icon",
+                    contentDescription = "Dashcon",
                     tint = Color.Black,
                     modifier = Modifier.size(36.dp)
                 )
