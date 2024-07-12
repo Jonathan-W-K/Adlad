@@ -109,7 +109,7 @@ fun SignUpScreen(navController: NavController, onSignUpSuccess: () -> Unit) {
                             popUpTo(ROUTE_REGISTER) { inclusive = true }
                         }
                     },
-                text = "go to login",
+                text = "",
                 textAlign = TextAlign.Center,
                 color = androidx.compose.material3.MaterialTheme.colorScheme.onSurface
             )
