@@ -136,7 +136,7 @@ fun DashboardScreen(navController: NavHostController)  {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color(0xff704E9FE)),
+                    .background(Color(0xff000000)),
 //                verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
 
